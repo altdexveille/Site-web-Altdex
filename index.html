@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AltDeX — Ta collection de cartes, gérée comme un portefeuille</title>
+<meta name="description" content="AltDeX : la première application d'investissement TCG sous la forme d'un jeu vidéo. Scanne, suis la cote en temps réel et fais fructifier ta collection.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=VT323&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="AltDeX accueil">
+      <img src="assets/logo.png" alt="AltDeX">
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#concept">Le concept</a>
+      <a href="#features">Fonctionnalités</a>
+      <a href="#how">Comment ça marche</a>
+      <a href="#moula">Prof. Moula</a>
+      <a href="#demo">Démo</a>
+      <a href="#reseaux">Réseaux</a>
+      <a href="#blog">Blog</a>
+      <a href="#guide">Guide</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn green" href="#download">Télécharger</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow on-dark">TCG × Investissement × Gaming</p>
+      <h1>La première appli d'investissement <span class="hl">sous la forme d'un jeu vidéo.</span></h1>
+      <p class="lead on-dark">Scanne tes cartes, suis leur cote en temps réel et fais fructifier ta collection comme un vrai portefeuille — avec l'XP, le Dex et le Professeur Moula en bonus.</p>
+      <form class="early-form" id="earlyForm" novalidate>
+        <p class="early-label"><span class="dot"></span>Accès anticipé · inscris-toi à la bêta</p>
+        <div class="early-fields">
+          <input type="text" name="nom" placeholder="Nom et prénom" autocomplete="name" required>
+          <input type="email" name="email" placeholder="Adresse mail" autocomplete="email" required>
+          <button class="btn green" type="submit">Rejoindre
+→
+</button>
+        </div>
+        <p class="early-confirm" id="earlyConfirm" hidden>✓ Inscription reçue — on te prévient au lancement&nbsp;!</p>
+      </form>
+      <a class="demo-link on-dark" href="https://altdexveille.github.io/altdex-app/" target="_blank" rel="noopener">▸ Essaie la démo en ligne →</a>
+      <div class="hero-tags">
+        <span class="tag">SCAN <b>ALTDEX</b></span>
+        <span class="tag">COTE <b>LIVE</b></span>
+        <span class="tag">XP &amp; <b>DEX</b></span>
+        <span class="tag">PROF. <b>MOULA</b></span>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="float-chip chip-live">
+        <div class="ico" style="background:rgba(47,191,113,.15);color:var(--green-deep)">●</div>
+        <div><small>PORTFOLIO · LIVE</small><span class="big">6 532,40 €</span></div>
+      </div>
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="screen">
+          <img src="assets/hero-screen.png" alt="Écran d'accueil de l'application AltDeX : portfolio, graphique et Professeur Moula">
+        </div>
+      </div>
+      <div class="float-chip chip-xp">
+        <div class="ico" style="background:rgba(244,181,63,.18);color:var(--gold-deep)">★</div>
+        <div><small>DRESSEUR · NIV.12</small><span class="big">+248 € · 3,9 %</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="strip" aria-hidden="true">
+  <div class="marquee">
+    <span>SCAN TA CARTE</span><span>COTE TEMPS RÉEL</span><span>VOLATILITÉ &amp; VOLUME</span><span>GRADATION</span><span>GAGNE DE L'XP</span><span>COMPLÈTE TON DEX</span><span>PROF. MOULA</span>
+    <span>SCAN TA CARTE</span><span>COTE TEMPS RÉEL</span><span>VOLATILITÉ &amp; VOLUME</span><span>GRADATION</span><span>GAGNE DE L'XP</span><span>COMPLÈTE TON DEX</span><span>PROF. MOULA</span>
+  </div>
+</div>
+
+<!-- ============ CONCEPT ============ -->
+<section class="concept section-pad" id="concept">
+  <div class="wrap concept-grid">
+    <div class="reveal">
+      <p class="eyebrow">Le concept</p>
+      <h2 class="title">L'investissement, mais de façon gamifiée.</h2>
+      <p class="lead" style="margin-top:20px">Les cartes à collectionner sont devenues de vrais actifs : leur valeur monte, descend, se cote. AltDeX transforme cette réalité financière en aventure. Chaque carte scannée rejoint ton portefeuille <em>et</em> ton Dex. Chaque bon move te fait gagner de l'XP. Sérieux comme une appli de bourse, addictif comme un RPG.</p>
+      <div class="hero-cta" style="margin-top:30px">
+        <a class="btn" href="#features">Voir les fonctionnalités <span class="arrow">→</span></a>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="fusion">
+        <div class="fusion-card">
+          <div class="glyph">🃏</div>
+          <h4>Ta collection TCG</h4>
+          <p>Des cartes que tu aimes, qui prennent de la valeur.</p>
+        </div>
+        <div class="times">×</div>
+        <div class="fusion-card">
+          <div class="glyph">🎮</div>
+          <h4>Un vrai jeu</h4>
+          <p>Niveaux, XP, Dex à compléter, un prof qui te guide.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section class="features section-pad" id="features">
+  <div class="wrap">
+    <div class="reveal" style="max-width:60ch">
+      <p class="eyebrow">Fonctionnalités</p>
+      <h2 class="title">Tout l'arsenal du dresseur-investisseur.</h2>
+    </div>
+    <div class="feat-grid">
+
+      <article class="feat reveal accent">
+        <span class="badge">CORE</span>
+        <div class="ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><line x1="3" y1="12" x2="21" y2="12"/></svg>
+        </div>
+        <h3>Scan AltDex</h3>
+        <p>Pointe ton appareil photo : la carte est reconnue et ajoutée à ton portefeuille en une seconde. Ton Dex d'actifs.</p>
+      </article>
+
+      <article class="feat reveal">
+        <div class="ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-6 4 4 7-9"/><path d="M17 6h4v4"/></svg>
+        </div>
+        <h3>Cote en temps réel</h3>
+        <p>Prix synchronisés avec Cardmarket, eBay et les marketplaces. La valeur de ta collection, minute par minute.</p>
+      </article>
+
+      <article class="feat reveal">
+        <div class="ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="4" height="9"/><rect x="10" y="4" width="4" height="16"/><rect x="17" y="8" width="4" height="12"/></svg>
+        </div>
+        <h3>Données financières</h3>
+        <p>Volatilité, volume d'échange, capitalisation. Les indicateurs d'un trader, appliqués à tes cartes.</p>
+      </article>
+
+      <article class="feat reveal">
+        <div class="ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 5 5.6.8-4 4 1 5.6L12 20l-5 2.4 1-5.6-4-4 5.6-.8z"/></svg>
+        </div>
+        <h3>Gradation</h3>
+        <p>Estime l'état et le grade de tes cartes pour connaître leur vraie valeur marchande — du brut au PSA 10.</p>
+      </article>
+
+      <article class="feat reveal gold">
+        <span class="badge">IA</span>
+        <div class="ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 10h.01M15 10h.01M8.5 15a4 4 0 0 0 7 0"/></svg>
+        </div>
+        <h3>Le Professeur Moula</h3>
+        <p>Ton assistant maison. Il analyse tes cartes, donne son avis « achat / garde / vend » et commente tes perfs.</p>
+      </article>
+
+      <article class="feat reveal">
+        <div class="ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v13"/><path d="M4 19h16M9 4v15M4 9h5M4 14h5"/></svg>
+        </div>
+        <h3>Dex gamifié &amp; XP</h3>
+        <p>Complète ton Dex, monte de niveau, débloque des paliers. Chaque carte rapproche du 100 %.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="steps section-pad" id="how">
+  <div class="wrap">
+    <div class="reveal" style="max-width:60ch">
+      <p class="eyebrow on-dark">Comment ça marche</p>
+      <h2 class="title">De la carte au portefeuille en 4 moves.</h2>
+    </div>
+    <div class="step-grid">
+      <div class="step reveal">
+        <div class="num">01</div>
+        <h3>Scanne</h3>
+        <p>Dégaine l'AltDex et scanne ta carte. Reconnaissance instantanée, ajout au Dex.</p>
+      </div>
+      <div class="step reveal">
+        <div class="num">02</div>
+        <h3>Suis la cote</h3>
+        <p>Sa valeur s'affiche en temps réel, avec courbe, variation et indicateurs.</p>
+      </div>
+      <div class="step reveal">
+        <div class="num">03</div>
+        <h3>Demande au Prof</h3>
+        <p>Le Professeur Moula t'oriente : potentiel, risque, et le bon moment pour agir.</p>
+      </div>
+      <div class="step reveal">
+        <div class="num">04</div>
+        <h3>Gagne de l'XP</h3>
+        <p>Monte de niveau, complète ton Dex et regarde ton portefeuille grandir.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MOULA ============ -->
+<section class="moula section-pad" id="moula">
+  <div class="wrap moula-grid">
+    <div class="moula-figure reveal">
+      <div class="moula-stage">
+        <img src="assets/moula.png" alt="Le Professeur Moula, l'assistant d'AltDeX">
+      </div>
+      <span class="moula-name pixel">PROF. MOULA</span>
+    </div>
+    <div class="reveal">
+      <p class="eyebrow">Le Professeur Moula</p>
+      <h2 class="title">Un mentor dans ta poche.</h2>
+      <p class="lead" style="margin-top:18px">Mi-prof de labo, mi-analyste financier. Moula lit tes cartes, te félicite quand ça grimpe et te prévient quand ça surchauffe. Le ton d'un jeu, la rigueur d'un conseiller.</p>
+      <div class="moula-card">
+        <div class="tagline"><span class="dotlive"></span><span class="pixel">PROF. MOULA · EN LIGNE</span></div>
+        <div class="bubble" id="moulaBubble">Bonne journée, Dresseur ! Ton Dracaufeu grimpe de +14,9 % aujourd'hui. Volume en hausse, la cote chauffe — beau move, continue comme ça !▌</div>
+      </div>
+      <div class="moula-tips">
+        <div class="tip"><span class="dot">▸</span><div><strong>Analyse en langage humain</strong> — pas de jargon, juste un avis clair.</div></div>
+        <div class="tip"><span class="dot">▸</span><div><strong>Signaux d'opportunité</strong> — il repère les hausses et les pics de volume.</div></div>
+        <div class="tip"><span class="dot">▸</span><div><strong>Encouragements &amp; XP</strong> — chaque bon move est célébré.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEMO ============ -->
+<section class="demo section-pad" id="demo">
+  <div class="wrap">
+    <div class="reveal" style="max-width:62ch">
+      <p class="eyebrow on-dark">La démo</p>
+      <h2 class="title">Jette un œil à l'intérieur.</h2>
+      <p class="lead on-dark" style="margin-top:18px">Quelques écrans de l'application. La meilleure façon de comprendre AltDeX, c'est de l'essayer.</p>
+    </div>
+    <div class="demo-carousel">
+      <div class="demo-track">
+      <div class="demo-slide reveal">
+        <img src="assets/demo-moulab.png" alt="Le MouLab du TCG Pokémon sur AltDeX" loading="lazy">
+        <div class="label">LE MOULAB · TON LABO</div>
+      </div>
+      <div class="demo-slide reveal">
+        <img src="assets/demo-accueil.png" alt="Accueil et portefeuille de cartes AltDeX" loading="lazy">
+        <div class="label">ACCUEIL · TON PORTFOLIO</div>
+      </div>
+      <div class="demo-slide reveal">
+        <img src="assets/demo-scan.png" alt="Scan d'une carte et estimation d'état PSA" loading="lazy">
+        <div class="label">SCAN · ESTIMATION D'ÉTAT</div>
+      </div>
+      <div class="demo-slide reveal">
+        <img src="assets/demo-moula.png" alt="Chat avec le Professeur Moula" loading="lazy">
+        <div class="label">PROF. MOULA · LE CHAT</div>
+      </div>
+      <div class="demo-slide reveal">
+        <img src="assets/demo-cote.png" alt="Cote et détail d'une carte Pokémon" loading="lazy">
+        <div class="label">COTE · DÉTAIL DE LA CARTE</div>
+      </div>
+      <div class="demo-slide reveal">
+        <img src="assets/demo-social.png" alt="Classement des amis AltDeX" loading="lazy">
+        <div class="label">SOCIAL · CLASSEMENT</div>
+      </div>
+      <div class="demo-slide" aria-hidden="true">
+        <img src="assets/demo-moulab.png" alt="" loading="lazy">
+        <div class="label">LE MOULAB · TON LABO</div>
+      </div>
+      <div class="demo-slide" aria-hidden="true">
+        <img src="assets/demo-accueil.png" alt="" loading="lazy">
+        <div class="label">ACCUEIL · TON PORTFOLIO</div>
+      </div>
+      <div class="demo-slide" aria-hidden="true">
+        <img src="assets/demo-scan.png" alt="" loading="lazy">
+        <div class="label">SCAN · ESTIMATION D'ÉTAT</div>
+      </div>
+      <div class="demo-slide" aria-hidden="true">
+        <img src="assets/demo-moula.png" alt="" loading="lazy">
+        <div class="label">PROF. MOULA · LE CHAT</div>
+      </div>
+      <div class="demo-slide" aria-hidden="true">
+        <img src="assets/demo-cote.png" alt="" loading="lazy">
+        <div class="label">COTE · DÉTAIL DE LA CARTE</div>
+      </div>
+      <div class="demo-slide" aria-hidden="true">
+        <img src="assets/demo-social.png" alt="" loading="lazy">
+        <div class="label">SOCIAL · CLASSEMENT</div>
+      </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:26px">
+      <a class="btn green lg" href="https://altdexveille.github.io/altdex-app/" target="_blank" rel="noopener">Lancer la démo live <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DERNIERS POSTS ============ -->
+<section class="posts section-pad" id="reseaux">
+  <div class="wrap">
+    <div class="posts-head reveal">
+      <div>
+        <p class="eyebrow">Sur nos réseaux</p>
+        <h2 class="title">Les derniers posts du Prof.</h2>
+        <p class="lead">Décryptages de cartes, classements et archives secrètes du Labo. On partage nos analyses TCG au quotidien — rejoins la communauté.</p>
+      </div>
+      <div class="posts-follows">
+        <a class="posts-follow" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Suivre AltDeX sur Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"></circle></svg>
+          <span>Instagram</span>
+        </a>
+        <a class="posts-follow" href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="Suivre AltDeX sur TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3c.3 2.1 1.5 3.6 3.5 3.9V9c-1.3 0-2.5-.4-3.5-1.1v6.6c0 3.3-2.7 6-6 6s-6-2.7-6-6 2.7-6 6-6c.34 0 .67.03 1 .09v3.2a2.7 2.7 0 1 0 1.7 2.51V3h3.3z"></path></svg>
+          <span>TikTok</span>
+        </a>
+        <a class="posts-follow" href="https://discord.com/" target="_blank" rel="noopener" aria-label="Rejoindre le Discord AltDeX">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.54 5.6A16 16 0 0 0 15.6 4.4l-.24.5a14.7 14.7 0 0 1 3.4 1.07 13.3 13.3 0 0 0-11.5 0 14.7 14.7 0 0 1 3.4-1.07l-.24-.5A16 16 0 0 0 6.46 5.6 16.9 16.9 0 0 0 3.5 16.74a16.2 16.2 0 0 0 4.93 2.5l.6-1.04a10.5 10.5 0 0 1-1.66-.8l.41-.31a11.6 11.6 0 0 0 9.84 0l.41.31a10.5 10.5 0 0 1-1.66.8l.6 1.04a16.2 16.2 0 0 0 4.93-2.5A16.9 16.9 0 0 0 19.54 5.6zM9.5 14.3c-.95 0-1.73-.88-1.73-1.95s.76-1.96 1.73-1.96 1.74.89 1.73 1.96c0 1.07-.77 1.95-1.73 1.95zm5 0c-.95 0-1.73-.88-1.73-1.95s.76-1.96 1.73-1.96 1.74.89 1.73 1.96c0 1.07-.76 1.95-1.73 1.95z"></path></svg>
+          <span>Discord</span>
+        </a>
+        <a class="posts-follow" href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="S'abonner à la chaîne YouTube AltDeX">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.5 7.2a2.8 2.8 0 0 0-1.96-1.98C18.8 4.75 12 4.75 12 4.75s-6.8 0-8.54.47A2.8 2.8 0 0 0 1.5 7.2 29.2 29.2 0 0 0 1.03 12a29.2 29.2 0 0 0 .47 4.8 2.8 2.8 0 0 0 1.96 1.98c1.74.47 8.54.47 8.54.47s6.8 0 8.54-.47a2.8 2.8 0 0 0 1.96-1.98A29.2 29.2 0 0 0 22.97 12a29.2 29.2 0 0 0-.47-4.8zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"></path></svg>
+          <span>YouTube</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="posts-grid">
+      <a class="post-card reveal" href="https://www.instagram.com/" target="_blank" rel="noopener">
+        <div class="post-media">
+          <img src="assets/post-30ans.png" alt="Les cartes des 30 ans de Pokémon révélées" loading="lazy">
+          <span class="post-carousel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="7" y="3" width="14" height="18" rx="2"></rect><path d="M3 6v13a2 2 0 0 0 2 2h11"></path></svg>Carrousel</span>
+        </div>
+        <div class="post-body">
+          <p><b>Les cartes des 30 ans révélées.</b> On décrypte le coffret anniversaire et les cartes qui s'arrachent déjà.</p>
+          <span class="post-link">Voir le post <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a class="post-card reveal" href="https://www.instagram.com/" target="_blank" rel="noopener">
+        <div class="post-media">
+          <img src="assets/post-ecto.png" alt="Top 5 des cartes Ectoplasma" loading="lazy">
+          <span class="post-carousel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="7" y="3" width="14" height="18" rx="2"></rect><path d="M3 6v13a2 2 0 0 0 2 2h11"></path></svg>Carrousel</span>
+        </div>
+        <div class="post-body">
+          <p><b>Top 5 des cartes Ectoplasma.</b> Du Ectoplasma Skyridge à la Méga-Ectoplasma ex : le classement du Labo.</p>
+          <span class="post-link">Voir le post <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a class="post-card reveal" href="https://www.instagram.com/" target="_blank" rel="noopener">
+        <div class="post-media">
+          <img src="assets/post-pikachu.png" alt="L'histoire de la carte Pikachu Illustrator" loading="lazy">
+          <span class="post-carousel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="7" y="3" width="14" height="18" rx="2"></rect><path d="M3 6v13a2 2 0 0 0 2 2h11"></path></svg>Carrousel</span>
+        </div>
+        <div class="post-body">
+          <p><b>L'histoire de la carte Pikachu Illustrator.</b> L'une des cartes les plus rares au monde, déclassifiée.</p>
+          <span class="post-link">Voir le post <span class="arrow">→</span></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ARTICLE / GUIDE SEO ============ -->
+<section class="article section-pad" id="guide">
+  <div class="wrap">
+    <div class="article-head reveal">
+      <p class="eyebrow">Le guide</p>
+      <h2 class="title">Investir dans les cartes Pokémon, expliqué simplement.</h2>
+      <p class="lead">Le <strong>TCG Pokémon</strong> n'est plus seulement un jeu de cartes à collectionner : c'est devenu un véritable marché, avec ses cotes, sa volatilité et ses cartes vedettes. Voici comment une <strong>application d'investissement TCG</strong> comme AltDeX t'aide à comprendre, suivre et faire fructifier ta collection.</p>
+    </div>
+
+    <div class="article-layout">
+      <aside class="toc reveal">
+        <h5>Sommaire</h5>
+        <a href="#guide-marche">Le marché du TCG Pokémon</a>
+        <a href="#guide-app">Pourquoi une app d'investissement TCG</a>
+        <a href="#guide-cote">Suivre la cote en temps réel</a>
+        <a href="#guide-valeur">Ce qui fait la valeur d'une carte</a>
+        <a href="#guide-debutant">Débuter sans se tromper</a>
+        <a href="#guide-faq">Questions fréquentes</a>
+      </aside>
+
+      <div class="prose reveal">
+
+        <section class="prose-section" id="guide-marche">
+          <h3>Le TCG Pokémon, un véritable marché d'actifs</h3>
+          <p class="lede">En une vingtaine d'années, les <span class="kw">cartes Pokémon</span> sont passées du fond de cour de récréation aux ventes aux enchères médiatisées. Certaines <span class="kw">cartes rares</span> — comme un <span class="kw">Dracaufeu</span> de première édition en parfait état — atteignent désormais des prix à cinq ou six chiffres.</p>
+          <p>Ce qui était un loisir est devenu une classe d'actifs alternative à part entière. Comme une action ou une crypto, une carte a un <strong>prix de marché</strong> qui évolue selon l'offre et la demande, un <strong>volume d'échange</strong> et une <strong>volatilité</strong>. Les éditions limitées, les cartes promotionnelles et les sorties de nouveaux sets créent des cycles que les collectionneurs avertis apprennent à lire.</p>
+          <p>Le <span class="kw">marché des cartes à collectionner</span> (TCG, pour <em>Trading Card Game</em>) s'est structuré autour de places de marché internationales et d'organismes de gradation reconnus. Résultat : suivre la valeur d'une collection demande aujourd'hui les mêmes réflexes qu'un petit portefeuille d'investissement.</p>
+        </section>
+
+        <section class="prose-section" id="guide-app">
+          <h3>Pourquoi utiliser une application d'investissement TCG</h3>
+          <p>Tenir sa collection à jour dans un tableur, comparer les prix sur plusieurs sites, vérifier l'état de chaque carte… c'est vite ingérable. Une <span class="kw">application d'investissement TCG</span> centralise tout au même endroit et transforme une corvée en jeu.</p>
+          <ul class="checks">
+            <li><b>Un portefeuille clair</b> — la valeur totale de ta collection, sa progression et tes plus-values, en un coup d'œil.</li>
+            <li><b>Des prix fiables</b> — la cote agrégée depuis les principales marketplaces, plutôt qu'une estimation au doigt mouillé.</li>
+            <li><b>Des indicateurs de pro</b> — volatilité, volume, tendance : les mêmes signaux qu'un trader, appliqués à tes cartes Pokémon.</li>
+            <li><b>De la motivation</b> — la gamification (XP, niveaux, Dex à compléter) rend le suivi addictif au lieu d'être une contrainte.</li>
+          </ul>
+          <p>C'est exactement la promesse d'AltDeX : la rigueur d'une <span class="kw">appli de bourse</span> et le plaisir d'un RPG. Tu <a class="inline" href="#features">scannes une carte</a>, elle rejoint ton portefeuille <em>et</em> ton Dex, et le <a class="inline" href="#moula">Professeur Moula</a> t'explique en langage humain s'il vaut mieux garder, vendre ou renforcer.</p>
+        </section>
+
+        <section class="prose-section" id="guide-cote">
+          <h3>Suivre la cote de ses cartes Pokémon en temps réel</h3>
+          <p>La <span class="kw">cote d'une carte Pokémon</span> n'est pas un chiffre figé : elle bouge au gré des ventes réelles. Un tournoi qui remet une carte au goût du jour, une rupture de stock sur un booster, l'annonce d'une réimpression… et le prix s'ajuste en quelques heures.</p>
+          <p>AltDeX synchronise les prix avec des places de marché comme <span class="kw">Cardmarket</span>, eBay et les principales marketplaces, puis les agrège en une cote lisible. Tu obtiens une <strong>courbe de prix</strong>, une <strong>variation sur la journée</strong> et des repères de <strong>volume d'échange</strong> — de quoi repérer les hausses, les pics de volume et les opportunités avant qu'elles ne passent.</p>
+          <div class="pullnote">
+            <p>« Suivre la cote en temps réel, c'est arrêter de vendre trop tôt — ou d'acheter au plus haut. »</p>
+            <p class="src">— L'esprit AltDeX</p>
+          </div>
+          <p>L'objectif n'est pas de transformer chaque collectionneur en spéculateur, mais de donner à chacun les informations dont disposent déjà les acheteurs professionnels. Connaître la <span class="kw">valeur réelle de ses cartes</span>, c'est décider en connaissance de cause.</p>
+        </section>
+
+        <section class="prose-section" id="guide-valeur">
+          <h3>Gradation, rareté et état : ce qui fait la valeur d'une carte</h3>
+          <p>Deux exemplaires de la même carte peuvent valoir du simple au centuple. Trois facteurs principaux expliquent l'écart.</p>
+          <ul class="checks">
+            <li><b>La rareté</b> — édition, set, tirage, statut promotionnel ou « secret rare ». Plus une carte est difficile à trouver, plus la demande pousse son prix.</li>
+            <li><b>L'état</b> — centrage, coins, bords, surface. Une carte « near mint » se négocie bien au-dessus d'une carte abîmée.</li>
+            <li><b>La gradation</b> — l'évaluation officielle par un organisme comme PSA. Une carte certifiée <span class="kw">PSA 10</span> (état gemme) vaut souvent plusieurs fois la même carte brute.</li>
+          </ul>
+          <p>AltDeX t'aide à estimer l'état et le potentiel de gradation de tes cartes avant de te lancer. Savoir si une carte mérite d'être envoyée en <span class="kw">gradation PSA</span> — du brut au PSA 10 — change radicalement le calcul de sa valeur marchande.</p>
+        </section>
+
+        <section class="prose-section" id="guide-debutant">
+          <h3>Débuter dans l'investissement TCG sans se tromper</h3>
+          <p>Pas besoin d'un gros budget pour commencer. Quelques principes simples évitent les erreurs classiques du <span class="kw">collectionneur-investisseur</span> débutant&nbsp;:</p>
+          <ul class="checks">
+            <li><b>Collectionne ce que tu aimes</b> — si la valeur baisse, tu gardes au moins des cartes qui te plaisent.</li>
+            <li><b>Vérifie toujours la cote</b> — avant d'acheter comme avant de vendre, compare au prix de marché.</li>
+            <li><b>Soigne la conservation</b> — sleeves, toploaders, classeurs : l'état protège ta plus-value.</li>
+            <li><b>Pense long terme</b> — le marché du TCG connaît des cycles ; la patience est souvent récompensée.</li>
+          </ul>
+          <p>C'est précisément le rôle d'AltDeX&nbsp;: te donner les bons réflexes dès le départ, sans jargon, et faire de chaque <span class="kw">scan de carte</span> une nouvelle étape dans ton aventure de dresseur-investisseur.</p>
+        </section>
+
+        <section class="prose-section" id="guide-faq">
+          <h3>Questions fréquentes</h3>
+          <div class="faq">
+            <details>
+              <summary><span>Les cartes Pokémon sont-elles un bon investissement&nbsp;?</span><span class="q-ic">+</span></summary>
+              <div class="a"><p>Comme tout actif de collection, les cartes Pokémon peuvent prendre comme perdre de la valeur. Les cartes rares en excellent état, gradées et issues d'éditions recherchées ont historiquement bien tenu, mais aucun rendement n'est garanti. L'intérêt d'une application d'investissement TCG est justement de suivre la cote réelle pour décider sur des données, pas sur des rumeurs.</p></div>
+            </details>
+            <details>
+              <summary><span>Comment connaître la valeur d'une carte Pokémon&nbsp;?</span><span class="q-ic">+</span></summary>
+              <div class="a"><p>La valeur dépend de la rareté, de l'état et de la gradation. AltDeX scanne ta carte, l'identifie et affiche sa cote agrégée depuis les principales marketplaces (Cardmarket, eBay…), avec sa courbe de prix et sa variation récente.</p></div>
+            </details>
+            <details>
+              <summary><span>Qu'est-ce que la gradation PSA et pourquoi est-ce important&nbsp;?</span><span class="q-ic">+</span></summary>
+              <div class="a"><p>La gradation est l'évaluation officielle de l'état d'une carte par un organisme indépendant comme PSA, sur une échelle allant jusqu'à 10. Une carte certifiée PSA 10 est authentifiée et scellée, ce qui rassure les acheteurs et fait souvent grimper sa valeur bien au-dessus d'une carte brute identique.</p></div>
+            </details>
+            <details>
+              <summary><span>AltDeX est-il gratuit&nbsp;?</span><span class="q-ic">+</span></summary>
+              <div class="a"><p>Tu peux scanner tes cartes, suivre la cote et constituer ton portefeuille dès le téléchargement. Tu peux aussi <a class="inline" href="https://altdexveille.github.io/altdex-app/" target="_blank" rel="noopener">essayer la démo en ligne</a> sans rien installer pour découvrir l'expérience.</p></div>
+            </details>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BLOG ============ -->
+<section class="blog section-pad" id="blog">
+  <div class="wrap">
+    <div class="blog-head reveal">
+      <div>
+        <p class="eyebrow on-dark">Le blog</p>
+        <h2 class="title">Le journal du Labo.</h2>
+        <p class="lead on-dark">Sorties événements, mouvements du marché et histoires de cartes cultes. On décrypte l'actu du TCG Pokémon, sans jargon.</p>
+      </div>
+    </div>
+
+    <div class="blog-grid">
+      <a class="blog-card reveal" href="#" style="--accent: var(--gold)">
+        <div class="blog-top">
+          <span class="blog-cat">Événement</span>
+          <span class="blog-num">01</span>
+        </div>
+        <h3>Les 30 ans, la sortie événement</h3>
+        <p class="blog-excerpt">Trois décennies de Pokémon, un coffret anniversaire et une pluie de cartes spéciales. On fait le point sur ce qu'il faut absolument savoir avant la sortie — et sur les cartes qui pourraient bien s'arracher dès le premier jour.</p>
+        <div class="blog-meta">
+          <span class="blog-when">5 MIN · ÉVÉNEMENT</span>
+          <span class="blog-read">Lire l'article <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a class="blog-card reveal" href="#" style="--accent: var(--green-500)">
+        <div class="blog-top">
+          <span class="blog-cat">Marché</span>
+          <span class="blog-num">02</span>
+        </div>
+        <h3>Les plus grosses hausses de la semaine</h3>
+        <p class="blog-excerpt">Qui grimpe, qui chauffe, qui décolle&nbsp;? Notre tour d'horizon hebdomadaire des cartes qui prennent le plus de valeur, avec les chiffres relevés sur les principales marketplaces et l'analyse du Prof. Moula.</p>
+        <div class="blog-meta">
+          <span class="blog-when">4 MIN · MARCHÉ</span>
+          <span class="blog-read">Lire l'article <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a class="blog-card reveal" href="#" style="--accent: var(--spectre)">
+        <div class="blog-top">
+          <span class="blog-cat">Archive</span>
+          <span class="blog-num">03</span>
+        </div>
+        <h3>L'histoire du Lugia de cristal</h3>
+        <p class="blog-excerpt">L'une des cartes les plus convoitées de l'ère Neo&nbsp;: le Lugia Crystal. Retour sur sa rareté, son design holographique unique et les raisons pour lesquelles les collectionneurs se l'arrachent encore aujourd'hui.</p>
+        <div class="blog-meta">
+          <span class="blog-when">6 MIN · ARCHIVE</span>
+          <span class="blog-read">Lire l'article <span class="arrow">→</span></span>
+        </div>
+      </a>
+    </div>
+
+    <div class="blog-all reveal">
+      <a class="btn ghost on-dark lg" href="#">Voir tous nos articles de blog <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta section-pad" id="download">
+  <div class="wrap">
+    <p class="eyebrow on-dark" style="justify-content:center">Prêt à jouer&nbsp;?</p>
+    <h2>Ta collection. Ton portefeuille. Ton aventure.</h2>
+    <p class="lead on-dark">Télécharge AltDeX et transforme tes cartes en un jeu où chaque niveau a de la valeur.</p>
+    <p class="soon-label">Bientôt disponible</p>
+    <div class="store-badges" style="justify-content:center">
+      <a class="store-badge" href="#" aria-label="Télécharger sur l'App Store">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.36 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.85-3.59 2.17-1.53 2.66-.39 6.6 1.1 8.76.73 1.06 1.6 2.25 2.74 2.2 1.1-.04 1.52-.71 2.85-.71 1.33 0 1.7.71 2.86.69 1.18-.02 1.93-1.08 2.65-2.14.84-1.23 1.18-2.42 1.2-2.48-.03-.01-2.29-.88-2.31-3.48zM14.2 6.05c.6-.74 1.01-1.76.9-2.78-.87.04-1.93.58-2.56 1.31-.56.65-1.05 1.69-.92 2.69.97.07 1.96-.49 2.58-1.22z"/></svg>
+        <span class="st"><small>Télécharger sur</small><b>l'App Store</b></span>
+      </a>
+      <a class="store-badge" href="#" aria-label="Disponible sur Google Play">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.4 13.2 12 3.6 21.6c-.33.16-.6-.04-.6-.45V2.85c0-.4.27-.61.6-.45z" fill="#3FD884"/><path d="M16.6 8.4 13.2 12 3.9 2.2c.25-.12.55-.1.85.1z" fill="#FF4C57"/><path d="M16.6 15.6 13.2 12 4.75 21.7c-.3.2-.6.22-.85.1z" fill="#FFC845"/><path d="M20.5 10.75c.55.32.55 1.78 0 2.1L16.6 15.6 13.2 12l3.4-3.6z" fill="#33BDF2"/></svg>
+        <span class="st"><small>Disponible sur</small><b>Google Play</b></span>
+      </a>
+    </div>
+    <a class="demo-link on-dark" href="https://altdexveille.github.io/altdex-app/" target="_blank" rel="noopener">▸ Essaie la démo en ligne →</a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="#top"><img src="assets/logo.png" alt="AltDeX"></a>
+        <p>L'investissement TCG sous la forme d'un jeu vidéo. Scanne, suis, fais fructifier.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>Produit</h5>
+          <a href="#concept">Le concept</a>
+          <a href="#features">Fonctionnalités</a>
+          <a href="#how">Comment ça marche</a>
+          <a href="#demo">Démo</a>
+          <a href="#guide">Guide d'investissement TCG</a>
+        </div>
+        <div class="footer-col">
+          <h5>Univers</h5>
+          <a href="#moula">Prof. Moula</a>
+          <a href="#features">Le Dex</a>
+          <a href="#reseaux">Nos réseaux</a>
+          <a href="#blog">Blog</a>
+          <a href="https://altdexveille.github.io/altdex-app/" target="_blank" rel="noopener">Démo live ↗</a>
+        </div>
+        <div class="footer-col">
+          <h5>Légal</h5>
+          <a href="#">Conditions générales d'utilisation</a>
+          <a href="#">Politique de confidentialité</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="pixel">© 2026 ALTDEX · TCG LAB</span>
+      <span>Cartes, prix et marques cités appartiennent à leurs propriétaires respectifs.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <rect width="100" height="100" fill="#161046"/>
+    <text x="50" y="46" font-family="'Space Grotesk',sans-serif" font-size="18" font-weight="700" fill="#7DF0B0" text-anchor="middle">AltDeX</text>
+    <text x="50" y="64" font-family="monospace" font-size="7" letter-spacing="1.5" fill="#A9A4D6" text-anchor="middle">TCG · LAB</text>
+  </svg>
+</template>
+
+<!-- ============ SEO : données structurées ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Investir dans les cartes Pokémon : le guide de l'application d'investissement TCG AltDeX",
+      "description": "Comprendre le marché du TCG Pokémon, suivre la cote de ses cartes en temps réel, évaluer la gradation PSA et débuter dans l'investissement TCG avec AltDeX.",
+      "inLanguage": "fr",
+      "about": ["TCG Pokémon", "Investissement TCG", "Cartes à collectionner", "Gradation PSA", "Cote des cartes Pokémon"],
+      "keywords": "TCG Pokémon, cartes Pokémon, investissement TCG, application d'investissement TCG, cote carte Pokémon, gradation PSA, Cardmarket, marché des cartes à collectionner",
+      "articleSection": "Guide",
+      "author": { "@type": "Organization", "name": "AltDeX" },
+      "publisher": { "@type": "Organization", "name": "AltDeX" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Les cartes Pokémon sont-elles un bon investissement ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Comme tout actif de collection, les cartes Pokémon peuvent prendre comme perdre de la valeur. Les cartes rares en excellent état, gradées et issues d'éditions recherchées ont historiquement bien tenu, mais aucun rendement n'est garanti. Une application d'investissement TCG comme AltDeX sert à suivre la cote réelle pour décider sur des données plutôt que sur des rumeurs." }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment connaître la valeur d'une carte Pokémon ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "La valeur dépend de la rareté, de l'état et de la gradation. AltDeX scanne la carte, l'identifie et affiche sa cote agrégée depuis les principales marketplaces comme Cardmarket et eBay, avec sa courbe de prix et sa variation récente." }
+        },
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce que la gradation PSA et pourquoi est-ce important ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "La gradation est l'évaluation officielle de l'état d'une carte par un organisme indépendant comme PSA, sur une échelle allant jusqu'à 10. Une carte certifiée PSA 10 est authentifiée et scellée, ce qui rassure les acheteurs et fait souvent grimper sa valeur bien au-dessus d'une carte brute identique." }
+        },
+        {
+          "@type": "Question",
+          "name": "AltDeX est-il gratuit ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Tu peux scanner tes cartes, suivre la cote et constituer ton portefeuille dès le téléchargement. Une démo en ligne permet aussi de découvrir l'expérience sans rien installer." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+</body>
+</html>
